@@ -1,0 +1,21 @@
+{
+    "name": "johnbrimley.angular",
+    "version": "0.0.1",
+    "description": "The web client for johnbrimley.net",
+    "main": "index.js",
+    "scripts": {
+      "build": "ng build"
+    },
+    "keywords": [],
+    "author": "John Brimley",
+    "browserslist": [
+      "Edge >= 89",
+      "FF >= 90",
+      "Chrome >= 91"
+    ],
+    "dependencies": {
+    },
+    "devDependencies": {
+    }
+  }
+  
