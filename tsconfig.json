@@ -1,0 +1,17 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig.json",
+    "compileOnSave": true,
+    "buildOptions": {},
+    "compilerOptions": {
+      "experimentalDecorators": true,
+      "outDir": "dev_server/static",
+      "mapRoot": "dev_server/static/sourcemap",
+      "module": "ES2020",
+      "moduleResolution": "node",
+      "noEmitOnError": true,
+      "sourceMap": true,
+      "target": "ES2021"
+    },
+    "exclude": ["node_modules/**/*","dev_server/**/*"],
+    "include": ["src/**/*"]
+  }
