@@ -1,0 +1,60 @@
+{
+    "$schema": "https://github.com/angular/angular-cli/blob/master/packages/angular/cli/lib/config/workspace-schema.json",
+    "cli": {
+      "analytics": "284e4e51-fabd-46e9-879a-0d9279c47814"
+    },
+    "version": 1,
+    "projects": {
+      "johnbrimley-angular": {
+        "root": "",
+        "sourceRoot": "src",
+        "projectType": "application",
+        "prefix": "app",
+        "architect": {
+          "build": {
+            "builder": "@angular-devkit/build-angular:browser",
+            "options": {
+              "outputPath": "dev_server/static",
+              "index": "src/index.html",
+              "main": "src/main.ts",
+              "tsConfig": "tsconfig.json",
+              "styles": [
+                "src/custom-theme.scss"
+              ]
+            },
+            "configurations": {
+              "production": {
+                "aot": true,
+                "optimization": {
+                  "scripts": true,
+                  "styles": {
+                    "minify": true,
+                    "inlineCritical": false
+                  },
+                  "fonts": true
+                },
+                "buildOptimizer": true,
+                "sourceMap": false
+              },
+              "dev": {
+                "buildOptimizer": false,
+                "optimization": false,
+                "aot": false,
+                "sourceMap": true
+              }
+            }
+          },
+          "serve": {
+            "builder": "@angular-devkit/build-angular:dev-server",
+            "options": {
+              "browserTarget": "johnbrimley-angular:build:dev",
+              "port": 4200,
+              "host": "localhost",
+              "liveReload": true,
+              "watch": true
+            }
+          }
+        }
+      }
+    }
+  }
