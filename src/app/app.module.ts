@@ -4,6 +4,10 @@ import { CommonModule } from '@angular/common';
 
 import { MaterialModule } from './material.module'
 
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+ 
+
 
 @NgModule({
     declarations: [
